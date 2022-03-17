@@ -6,4 +6,10 @@ su www-data <<EOSU
 
 /var/www/html/bin/magento setup:upgrade
 
+bin/magento setup:di:compile
+
+bin/magento setup:static-content:deploy -f
+
+chmod -R 777 pub var
+
 EOSU
